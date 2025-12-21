@@ -52,7 +52,7 @@ class dieta_gatos:
             print(f"Cantidad diaria de croquetas: {self.croquetas_diarias} gramos")
             print(f"Cantidad diaria de comida casera: {self.comida_carnes} kg")
 
-    # Imprime la condición con la que se van a validar los datos
+    # Método que imprime la condición con la que se van a validar los datos
     def validar_dieta_seleccionada(self):
         print("\n¿Es correcta la dieta seleccionada?")
         print("1. Sí")
@@ -72,9 +72,9 @@ class dieta_gatos:
     # Método que valida la hidratación felina
     def validar_suplemento_liquido(self):
         if self.hidratacion == "agua":
-            print("\nEl gato o gata tiene agua para acompañar su dieta.")
+            print("\nEl gato o gata tiene agua para acompañar su dieta 😺.")
         elif self.hidratacion == "leche":
-            print("\nEl gato o gata tiene leche para acompañar su dieta.")
+            print("\nEl gato o gata tiene leche para acompañar su dieta 🙀.")
         else:
             print(
                 "\nEl gato o gata no tiene ningún medio de hidratación para acompañar su dieta, recuerde siempre incorporar agua o leche según sea necesario para su hidratación.")
