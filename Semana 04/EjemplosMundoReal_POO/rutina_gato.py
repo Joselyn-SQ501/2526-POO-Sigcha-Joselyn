@@ -13,9 +13,10 @@ class rutina_gato:
         self.tipo_actividad = input("Ingrese el tipo de actividad favorita del gato o gata (ej. caza, exploración, descanso, paseo): ")
 
         print("\nIngrese los lugares favoritos del gato o gata (ingrese 'fin' para terminar): ")
+        # Bucle para solicitar el ingreso de varios lugares favoritos del gato que irán agregándose al atributo lugares favoritos
         while True:
             lugar = input("Ingrese un lugar favorito: ")
-            if lugar.lower() == 'fin':
+            if lugar.lower() == 'fin': #  Condición que permite terminar el bucle de la información solicitada
                 break
             self.lugares_favoritos.append(lugar)
 
@@ -25,10 +26,11 @@ class rutina_gato:
         print(f"Horas diarias de actividad: {self.horas_actividad_diaria}")
         print(f"Tipo de actividad favorita: {self.tipo_actividad}")
         print("Lugares favoritos:")
+        # Lee el array del atributo de lugares favoritos
         for lugar in self.lugares_favoritos:
             print(f"- {lugar}")
 
-    # Imprime la condición con la que se van a validar los datos
+    # Método que imprime la condición con la que se van a validar los datos
     def validar_rutina_definida(self):
         print("\n¿Es correcta la rutina definida?")
         print("1. Sí")
