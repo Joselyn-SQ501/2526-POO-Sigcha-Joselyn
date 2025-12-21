@@ -16,7 +16,7 @@ class main:
     # Instancia de la gestión de datos del gato
     datos = datos_gatos()
 
-    print("Datos del gato o gata 😺")
+    print("Datos del michi 😺")
 
     datos.datos_pedidos() # Llama al método de pedir datos de la instancia datos
     datos.mostrar_datos() # Llama al método mostrar datos de la instancia datos
@@ -24,24 +24,23 @@ class main:
 
     # Instancia de la gestión de la dieta del gato
     dieta = dieta_gatos()
-    print("\nAhora, especifica la dieta del gato o gata 😺 por favor")
-    dieta.dieta_dia()   # Llama al método de dieta del día de la instancia dieta
+    print(f"\n🍗Ahora, especifica la dieta de {datos.nombre} 😺 por favor")
+    dieta.dieta_dia(datos.nombre)   # Llama al método de dieta del día de la instancia dieta
     dieta.mostrar_dieta() # Llama al método de mostrar dieta de la instancia dieta
-    dieta.validar_dieta_seleccionada() # Llama al método de validar dieta de la instancia dieta
-    dieta.validar_suplemento_liquido() # Llama al método de suplemento líquido de la instancia dieta
+    dieta.validar_dieta_seleccionada(datos.nombre) # Llama al método de validar dieta de la instancia dieta
 
     # Instancia de la gestión de la rutina del gato
     rutina = rutina_gato()
-    print("\nAhora, define la rutina del gato o gata 😺")
-    rutina.definir_rutina() # Llama al método definir rutina de la instancia rutina
+    print(f"\n💤Ahora, define la rutina de {datos.nombre} 😺")
+    rutina.definir_rutina(datos.nombre) # Llama al método definir rutina de la instancia rutina
     rutina.mostrar_rutina() # Llama al método de mostrar rutina de la instancia rutina
-    rutina.validar_rutina_definida() # Llama al método de validar rutina de la instancia rutina
+    rutina.validar_rutina_definida(datos.nombre) # Llama al método de validar rutina de la instancia rutina
 
     # Instancia de la gestión del entretenimiento del gato
     entretenimiento = entretenimiento_gatos()
-    print("\nFinalmente, ingresa las actividades de entretenimiento del gato o gata 😺")
-    entretenimiento.seleccionar_entretenimiento() # Llama al método seleccionar entretenimiento de la instancia entretenimiento
+    print(f"\n🎣Finalmente, ingresa las actividades de entretenimiento de {datos.nombre} 😺")
+    entretenimiento.seleccionar_entretenimiento(datos.nombre) # Llama al método seleccionar entretenimiento de la instancia entretenimiento
     entretenimiento.mostrar_entretenimiento() # Llama al método de mostrar entretenimiento de la instancia entretenimiento
-    entretenimiento.validar_entretenimiento_seleccionado() # Llama al método validar entretenimiento de la instancia entretenimiento
+    entretenimiento.validar_entretenimiento_seleccionado(datos.nombre) # Llama al método validar entretenimiento de la instancia entretenimiento
 
     print("\n¡Gracias por usar el sistema de gestión de gatos!😺¡Buen día!✨")
