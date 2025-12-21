@@ -8,8 +8,8 @@ class entretenimiento_gatos:
         self.validar_entretenimiento = False # Atributo de validación de información
 
     # Método para solicitar los datos sobre el entretenimiento o juego del gato o gata al usuario
-    def seleccionar_entretenimiento(self):
-        print("\nIngrese los juguetes con los que el gato o gata juegan (ingrese 'fin' para terminar): ")
+    def seleccionar_entretenimiento(self, nombre_gato):
+        print(f"\nIngrese los juguetes con los que {nombre_gato} juegan (ingrese 'fin' para terminar): ")
         # Bucle para solicitar el ingreso de juguetes que usa el gato o gata que irán agregándose al atributo juguetes
         while True:
             juguete = input("Ingrese el nombre del juguete: ")
@@ -19,7 +19,7 @@ class entretenimiento_gatos:
 
         self.horas_juego_diarias = int(input("Ingrese las horas diarias de juego: "))
 
-        print("\nIngrese las actividades favoritas del gato o gata (ingrese 'fin' para terminar): ")
+        print(f"\nIngrese las actividades favoritas de {nombre_gato} (ingrese 'fin' para terminar): ")
         # Bucle para solicitar el ingreso de varias actividades favoritas del gato que irán agregándose al atributo actividades favoritas
         while True:
             actividad = input("Ingrese la actividad favorita: ")
@@ -41,8 +41,8 @@ class entretenimiento_gatos:
             print(f"- {actividad}")
 
     # Método que imprime la condición con la que se van a validar los datos
-    def validar_entretenimiento_seleccionado(self):
-        print("\n¿Son correctos los datos sobre el entretenimiento de su michi?")
+    def validar_entretenimiento_seleccionado(self, nombre_gato):
+        print(f"\n¿Son correctos los datos sobre el entretenimiento de {nombre_gato}?")
         print("1. Sí")
         print("2. No")
 
@@ -54,5 +54,5 @@ class entretenimiento_gatos:
             print("\n¡El entretenimiento ha sido validado correctamente 😺!")
         else:
             self.validar_entretenimiento = False
-            print("\nPor favor, ingrese nuevamente el entretenimiento del gato o gata 🙀")
-            entretenimiento_gatos.seleccionar_entretenimiento(self)
+            print(f"\nPor favor, ingrese nuevamente el entretenimiento de {nombre_gato} 🙀")
+            entretenimiento_gatos.seleccionar_entretenimiento(self, nombre_gato)
