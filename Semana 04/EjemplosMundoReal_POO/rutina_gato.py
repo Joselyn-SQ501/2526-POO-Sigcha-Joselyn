@@ -1,7 +1,7 @@
 # Subclase para ingresar la rutina del gato
 class rutina_gato:
+    # Creación de un constructor vacío
     def __init__(self):
-        # Creación de un constructor vacío
         self.horas_actividad_diaria = 0 # Atributo de las horas de actividad diarias del gato o gata ingresadas por el usuario
         self.tipo_actividad = "" # Atributo del tipo de actividad que realiza el gato o gata ingresado por el usuario
         self.lugares_favoritos = [] # Atributo de los espacios favoritos del gato o gata ingresados por el usuario
