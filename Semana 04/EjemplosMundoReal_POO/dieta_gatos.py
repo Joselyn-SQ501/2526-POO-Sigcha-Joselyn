@@ -63,18 +63,18 @@ class dieta_gatos:
         # Validación de los datos ingresados por medio de una condición numérica
         if opcion == "1":
             self.validar_dieta = True
-            print("\n¡La dieta ha sido validada correctamente!")
+            print("\n¡La dieta ha sido validada correctamente 😺!")
         else:
             self.validar_dieta = False
-            print("\nPor favor, seleccione nuevamente la dieta del gato o gata.")
+            print("\nPor favor, seleccione nuevamente la dieta del gato o gata 🙀.")
             dieta_gatos.dieta_dia(self)
 
     # Método que valida la hidratación felina
     def validar_suplemento_liquido(self):
         if self.hidratacion == "agua":
-            print("\nEl gato o gata tiene agua para acompañar su dieta 😺.")
+            print("\nEl gato o gata tiene agua para acompañar su dieta.")
         elif self.hidratacion == "leche":
-            print("\nEl gato o gata tiene leche para acompañar su dieta 🙀.")
+            print("\nEl gato o gata tiene leche para acompañar su dieta.")
         else:
             print(
                 "\nEl gato o gata no tiene ningún medio de hidratación para acompañar su dieta, recuerde siempre incorporar agua o leche según sea necesario para su hidratación.")
