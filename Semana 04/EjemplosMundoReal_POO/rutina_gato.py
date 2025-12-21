@@ -8,11 +8,11 @@ class rutina_gato:
         self.validar_rutina = False # Atributo de validación de información
 
     # Método para solicitar los datos sobre la rutina del gato o gata al usuario
-    def definir_rutina(self):
-        self.horas_actividad_diaria = int(input("Ingrese las horas diarias de actividad del gato o gata: "))
-        self.tipo_actividad = input("Ingrese el tipo de actividad favorita del gato o gata (ej. caza, exploración, descanso, paseo): ")
+    def definir_rutina(self, nombre_gato):
+        self.horas_actividad_diaria = int(input(f"Ingrese las horas diarias de actividad de {nombre_gato}: "))
+        self.tipo_actividad = input(f"Ingrese el tipo de actividad favorita de {nombre_gato} (ej. caza, exploración, descanso, paseo): ")
 
-        print("\nIngrese los lugares favoritos del gato o gata (ingrese 'fin' para terminar): ")
+        print(f"\nIngrese los lugares favoritos de {nombre_gato} (ingrese 'fin' para terminar): ")
         # Bucle para solicitar el ingreso de varios lugares favoritos del gato que irán agregándose al atributo lugares favoritos
         while True:
             lugar = input("Ingrese un lugar favorito: ")
@@ -31,7 +31,7 @@ class rutina_gato:
             print(f"- {lugar}")
 
     # Método que imprime la condición con la que se van a validar los datos
-    def validar_rutina_definida(self):
+    def validar_rutina_definida(self, nombre_gato):
         print("\n¿Es correcta la rutina definida?")
         print("1. Sí")
         print("2. No")
@@ -44,5 +44,5 @@ class rutina_gato:
             print("\n¡La rutina ha sido validada correctamente 😺!")
         else:
             self.validar_rutina = False
-            print("\nPor favor, defina nuevamente la rutina del gato o gata 🙀.")
-            rutina_gato.definir_rutina(self)
+            print(f"\nPor favor, defina nuevamente la rutina de {nombre_gato} 🙀.")
+            rutina_gato.definir_rutina(self, nombre_gato)
