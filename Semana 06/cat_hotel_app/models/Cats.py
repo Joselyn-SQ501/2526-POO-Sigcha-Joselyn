@@ -9,7 +9,8 @@ class Cats:
     #Método qetter para acceder a la información del gato ingresado
     def get_Information_Cats(self):
         return f"Nombre: {self.__name_cats}, Fecha de ingreso: {self.__enter_date_cats}"
-    #Método para mostrar la información del gato ingresado
+
+    #Método que aplica polimorfismo de sobreescritura al invocar get_Information_Cats() que puede ser sobreescrito en la clase hija.
     def show_name(self):
         return self.get_Information_Cats()
 
@@ -87,7 +88,8 @@ class DetailsCats(Cats):
     def get_description(self):
         return self.description_cats
 
-    # Método getter que extrae y combina la información de la clase padre y de la clase hija
+    #POLIMORFISMO DE SOBREESCRITURA
+    # Método que extrae y combina la información de la clase padre y de la clase hija
     def show_Information_DetailCats(self):
-        info_base = super().get_Information_Cats() #Trae el método de la clase padre
+        info_base = super().get_Information_Cats() #Trae el método de la clase padre y lo reutiliza.
         return f"{info_base}, Color: {self.__color_cats}, Edad: {self.__age_cats} meses"
